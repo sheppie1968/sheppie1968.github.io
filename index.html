@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SimplyMail</title>
+<meta name="description" content="SimplyMail is a simple email, calendar and contacts app for Android that works with the account you already have.">
+<link rel="icon" href="images/icon.png">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f3f6fb;
+    --text: #1b1f24;
+    --muted: #5a6370;
+    --accent: #2f7de1;
+    --accent-text: #ffffff;
+    --border: #dde3ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1216;
+      --surface: #181d24;
+      --text: #e8ecf1;
+      --muted: #9aa4b2;
+      --accent: #5b9cf0;
+      --accent-text: #0f1216;
+      --border: #2a313b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; }
+  main { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  a { color: var(--accent); }
+  header { display: flex; align-items: center; gap: 20px; padding: 56px 0 24px; }
+  header img { width: 88px; height: 88px; border-radius: 20px; flex: none; }
+  h1 { font-size: 2.4em; margin: 0; line-height: 1.1; }
+  .tagline { margin: 6px 0 0; color: var(--muted); font-size: 1.15em; }
+  .intro { font-size: 1.1em; max-width: 680px; }
+  .button { display: inline-block; background: var(--accent); color: var(--accent-text); text-decoration: none; font-weight: 600; padding: 12px 22px; border-radius: 999px; margin: 8px 0 0; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 40px 0; }
+  .shots img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--border); }
+  h2 { font-size: 1.4em; margin: 48px 0 12px; }
+  .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 0; list-style: none; }
+  .features li { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .features strong { display: block; margin-bottom: 4px; }
+  .note { background: var(--surface); border-left: 4px solid var(--accent); border-radius: 8px; padding: 16px 18px; }
+  footer { margin: 64px 0 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9em; }
+  footer a { margin-right: 16px; }
+  @media (max-width: 640px) {
+    header { padding-top: 32px; }
+    header img { width: 64px; height: 64px; border-radius: 14px; }
+    h1 { font-size: 1.9em; }
+    .shots { grid-template-columns: 1fr 1fr; }
+    .shots img:nth-child(3) { display: none; }
+    .features { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="images/icon.png" alt="SimplyMail icon">
+    <div>
+      <h1>SimplyMail</h1>
+      <p class="tagline">Email, calendar and contacts for Android, kept simple.</p>
+    </div>
+  </header>
+
+  <p class="intro">SimplyMail works with the email account you already have. Add your address and password, and it finds your provider's settings by itself. Read and write your mail, keep your appointments and contacts in step with your provider, and hand out tasks by email, all in one app with no ads and no tracking.</p>
+  <a class="button" href="https://play.google.com/store/apps/details?id=com.mark.simplymail">Get it on Google Play</a>
+
+  <div class="shots">
+    <img src="images/inbox.webp" width="540" height="960" alt="SimplyMail's inbox">
+    <img src="images/calendar.webp" width="540" height="960" alt="SimplyMail's calendar">
+    <img src="images/tasks.webp" width="540" height="960" alt="SimplyMail's task list">
+  </div>
+
+  <h2>What it does</h2>
+  <ul class="features">
+    <li><strong>Email</strong>Reads and sends mail with IMAP, POP3 and SMTP, so it works with most providers and your own mail server.</li>
+    <li><strong>Easy setup</strong>Finds your provider's server settings from your email address, so there's usually nothing to type but your password.</li>
+    <li><strong>Calendar</strong>Shows the calendars you keep with your provider (CalDAV), keeps changes in step both ways, reminds you of appointments, and emails invitations.</li>
+    <li><strong>Contacts</strong>Shows your provider's address book (CardDAV), lets you add and change contacts, and suggests addresses as you write.</li>
+    <li><strong>Tasks</strong>Assigns tasks to people by email, with due dates, and keeps track of them.</li>
+    <li><strong>Your own server</strong>Works with servers that use their own security certificate: it shows you the certificate and asks before trusting it.</li>
+  </ul>
+
+  <h2>Google Calendar and Google Contacts</h2>
+  <p class="note">For Gmail accounts, SimplyMail can connect Google Calendar and Google Contacts by signing in with Google. You choose what to allow on Google's own consent screen. The app uses this access only to show your calendars and contacts, and to make the changes you ask for. The data goes straight between your phone and Google, and is never sent to us or anyone else. This feature arrives in an update once Google has reviewed the app. The <a href="https://sheppie1968.github.io/simplymail-privacy-policy/">privacy policy</a> has the details.</p>
+
+  <h2>Your privacy</h2>
+  <p>SimplyMail has no server of its own. Your password, mail, calendars and contacts go directly between your phone and your provider, and are stored only on your phone. There are no ads, no analytics and no tracking. Read the full <a href="https://sheppie1968.github.io/simplymail-privacy-policy/">privacy policy</a>.</p>
+
+  <footer>
+    <a href="https://sheppie1968.github.io/simplymail-privacy-policy/">Privacy policy</a>
+    <a href="https://play.google.com/store/apps/details?id=com.mark.simplymail">Google Play</a>
+    <a href="mailto:shepherdmark1968@gmail.com">Contact</a>
+    <p>SimplyMail · com.mark.simplymail</p>
+  </footer>
+</main>
+</body>
+</html>
