@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SimplyMail desktop help</title>
+<meta name="description" content="How to use SimplyMail on Linux and Windows: accounts, reading, writing, organising, calendar, contacts and tasks.">
+<style>
+  :root { --text: #1c1b1f; --muted: #5f5b66; --accent: #6650a4; --line: #ddd8e4; --bg: #fffbfe; --mark: #efe7ff; }
+  @media (prefers-color-scheme: dark) { :root { --text: #e6e1e5; --muted: #b5adbd; --accent: #d0bcff; --line: #3a3640; --bg: #1c1b1f; --mark: #3b2f57; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.55; color: var(--text); background: var(--bg); }
+  main { max-width: 820px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; }
+  .lead { color: var(--muted); margin: 0 0 20px; }
+  input[type=search] { width: 100%; font: inherit; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: inherit; }
+  #none { color: var(--muted); display: none; }
+  nav { margin: 20px 0 8px; columns: 2 260px; }
+  nav h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); margin: 10px 0 2px; break-after: avoid; }
+  nav a { display: block; color: inherit; text-decoration: none; padding: 1px 0; }
+  nav a:hover { color: var(--accent); }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 32px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+  article h3 { font-size: 1.05rem; margin: 18px 0 4px; }
+  article p { margin: 0 0 10px; }
+  article:target h3 { background: var(--mark); }
+  footer { margin-top: 40px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>SimplyMail desktop help</h1>
+<p class="lead">For SimplyMail on Linux and Windows. In the app, press F1 or choose Help for the same help.</p>
+<input type="search" id="search" placeholder="Search the help" aria-label="Search the help" autofocus>
+<p id="none">Nothing in the help matches that. Try fewer or other words.</p>
+<nav id="contents">
+<h3>Getting started</h3>
+<a href="#adding-an-email-account">Adding an email account</a>
+<a href="#gmail-and-app-passwords">Gmail and app passwords</a>
+<a href="#changing-an-account-s-password">Changing an account's password</a>
+<a href="#removing-an-account">Removing an account</a>
+<a href="#opening-simplymail-when-you-log-in">Opening SimplyMail when you log in</a>
+<h3>Reading</h3>
+<a href="#the-email-list">The email list</a>
+<a href="#conversations">Conversations</a>
+<a href="#all-inboxes">All inboxes</a>
+<a href="#pictures-in-emails">Pictures in emails</a>
+<a href="#attachments">Attachments</a>
+<a href="#meeting-invitations">Meeting invitations</a>
+<a href="#read-receipts">Read receipts</a>
+<a href="#printing-and-saving-an-email">Printing and saving an email</a>
+<h3>Writing</h3>
+<a href="#writing-an-email">Writing an email</a>
+<a href="#attaching-files">Attaching files</a>
+<a href="#signatures">Signatures</a>
+<a href="#drafts">Drafts</a>
+<a href="#undo-send">Undo send</a>
+<a href="#sending-later">Sending later</a>
+<a href="#templates">Templates</a>
+<a href="#asking-for-a-read-receipt">Asking for a read receipt</a>
+<h3>Organising</h3>
+<a href="#deleting-emails">Deleting emails</a>
+<a href="#ticking-several-emails">Ticking several emails</a>
+<a href="#moving-and-archiving">Moving and archiving</a>
+<a href="#junk-and-spam">Junk and spam</a>
+<a href="#stars-and-unread">Stars and unread</a>
+<a href="#folders">Folders</a>
+<a href="#searching">Searching</a>
+<a href="#rules-for-new-mail">Rules for new mail</a>
+<a href="#saving-and-importing-folders">Saving and importing folders</a>
+<a href="#vacation-reply">Vacation reply</a>
+<h3>Calendar, contacts and tasks</h3>
+<a href="#calendar">Calendar</a>
+<a href="#contacts">Contacts</a>
+<a href="#tasks">Tasks</a>
+<h3>Settings and privacy</h3>
+<a href="#light-and-dark">Light and dark</a>
+<a href="#server-certificates">Server certificates</a>
+<a href="#your-privacy">Your privacy</a>
+<a href="#keyboard-shortcuts">Keyboard shortcuts</a>
+<h3>When something's wrong</h3>
+<a href="#the-server-refused-the-password">The server refused the password</a>
+<a href="#no-new-mail-notifications">No new-mail notifications</a>
+<a href="#pop3-accounts">POP3 accounts</a>
+</nav>
+<section>
+<h2>Getting started</h2>
+<article id="adding-an-email-account" data-title="adding an email account" data-keywords="setup sign in login new account imap pop3 smtp server port getting started">
+<h3>Adding an email account</h3>
+<p>In the sidebar, choose Add account. Enter your email address and password, then Continue: SimplyMail looks up your provider's settings itself. If it can't find them, or you'd rather, choose Enter settings myself and fill in the incoming server (IMAP or POP3) and the outgoing (SMTP) server, with their ports and security.</p>
+<p>Your password is kept in your keyring on Linux, or Windows Credential Manager on Windows, never in a file. Add as many accounts as you like; switch between them under Accounts in the sidebar.</p>
+</article>
+<article id="gmail-and-app-passwords" data-title="gmail and app passwords" data-keywords="google app password two step verification getting started">
+<h3>Gmail and app passwords</h3>
+<p>Gmail doesn't take your usual Google password from mail apps. Create an app password in your Google account (Security, then 2-Step Verification, then App passwords) and use that as the password in SimplyMail.</p>
+<p>If you change your Google password, Google may cancel your app passwords: make a new one, and enter it with Settings, Password, Change.</p>
+</article>
+<article id="changing-an-account-s-password" data-title="changing an account's password" data-keywords="new password refused wrong password getting started">
+<h3>Changing an account's password</h3>
+<p>If you've changed your password with your provider, open Settings and choose Change beside Password. SimplyMail checks the new one with your servers before keeping it. Nothing else about the account changes.</p>
+</article>
+<article id="removing-an-account" data-title="removing an account" data-keywords="delete account forget getting started">
+<h3>Removing an account</h3>
+<p>Pick the account in the sidebar and choose Remove this account at the bottom. SimplyMail forgets it on this computer, with its password, calendar, contacts, tasks, signature, rules and scheduled emails. Your email stays on the server.</p>
+</article>
+<article id="opening-simplymail-when-you-log-in" data-title="opening simplymail when you log in" data-keywords="start startup autostart login boot minimised getting started">
+<h3>Opening SimplyMail when you log in</h3>
+<p>In Settings, turn on Open SimplyMail when you log in. It opens minimised in the dock on Linux, or the taskbar on Windows, so new-mail notifications and appointment reminders come without you opening it.</p>
+</article>
+</section>
+<section>
+<h2>Reading</h2>
+<article id="the-email-list" data-title="the email list" data-keywords="inbox list unread bold older refresh panes resize width reading">
+<h3>The email list</h3>
+<p>The middle of the window lists the open folder's emails, newest first; unread ones are in bold. Click one to read it. Scrolling to the end loads older emails.</p>
+<p>Show unread shows only unread emails, and the star beside it only starred ones. Refresh (or F5) checks for new mail.</p>
+<p>Drag the lines between the sidebar, the list and the email to make them wider or narrower; double-click a line to put it back.</p>
+</article>
+<article id="conversations" data-title="conversations" data-keywords="threads thread replies grouped group reading">
+<h3>Conversations</h3>
+<p>An email and its replies show as one line, under the newest, with how many there are and an arrow that opens them. Your own replies, from your Sent folder, show in it too, as You.</p>
+<p>Ticking a conversation ticks all its emails, so Delete, Archive, Move and Junk act on the whole conversation. To list every email on its own, turn off Group conversations in Settings.</p>
+</article>
+<article id="all-inboxes" data-title="all inboxes" data-keywords="unified combined every account reading">
+<h3>All inboxes</h3>
+<p>With more than one account, All inboxes at the top of the folders lists every account's inbox together, newest first. Each email says which account it came to, and replying, deleting and the rest go through that account.</p>
+</article>
+<article id="pictures-in-emails" data-title="pictures in emails" data-keywords="images tracking privacy web pictures hidden reading">
+<h3>Pictures in emails</h3>
+<p>Pictures on the web are hidden at first, as loading them can tell the sender you've opened the email. Choose Show pictures above the email to see them. Pictures sent in the email itself always show.</p>
+</article>
+<article id="attachments" data-title="attachments" data-keywords="files open save download exe reading">
+<h3>Attachments</h3>
+<p>An email's attachments are listed above its text. Click one to open it in the app your computer uses for it, or choose Save beside it to keep it.</p>
+<p>Program files (like .exe or .sh) are never opened, as opening one runs it; save it instead if you trust the sender.</p>
+</article>
+<article id="meeting-invitations" data-title="meeting invitations" data-keywords="invite calendar accept decline tentative teams zoom reading">
+<h3>Meeting invitations</h3>
+<p>An email with a meeting invitation shows the meeting, with Accept, Tentative and Decline. Your answer goes in your calendar, and the organiser is told. Join meeting opens an online meeting's link.</p>
+</article>
+<article id="read-receipts" data-title="read receipts" data-keywords="receipt read notification disposition reading">
+<h3>Read receipts</h3>
+<p>When an email asks to be told you've opened it, SimplyMail asks you first: choose Send receipt or Don't send. Nothing is sent unless you choose. Emails in your Junk folder never ask, so spammers can't learn your address works.</p>
+</article>
+<article id="printing-and-saving-an-email" data-title="printing and saving an email" data-keywords="print pdf eml save file reading">
+<h3>Printing and saving an email</h3>
+<p>Print (or Ctrl+P) opens the email in your browser, ready to print or to save as a PDF.</p>
+<p>Save keeps the email as an .eml file, exactly as it came, with its attachments. Most mail apps can open one.</p>
+</article>
+</section>
+<section>
+<h2>Writing</h2>
+<article id="writing-an-email" data-title="writing an email" data-keywords="new email compose reply forward cc bcc send writing">
+<h3>Writing an email</h3>
+<p>Choose New email in the sidebar (or Ctrl+N). Each email opens in its own window, so you can keep reading meanwhile. As you type in To, Cc or Bcc, your contacts are suggested. Send it with Send (or Ctrl+Enter).</p>
+<p>Reply, Reply all and Forward are above an email you're reading (Ctrl+R, Ctrl+Shift+R, Ctrl+Shift+F).</p>
+</article>
+<article id="attaching-files" data-title="attaching files" data-keywords="attachment attach file drag drop writing">
+<h3>Attaching files</h3>
+<p>Choose Attach in the email's window, or drag files from your file manager onto it.</p>
+</article>
+<article id="signatures" data-title="signatures" data-keywords="signature sign off name writing">
+<h3>Signatures</h3>
+<p>Each account can have a signature, added under new emails, replies and forwards. Set it in Settings, while the account is shown in the sidebar. You can still change it in each email.</p>
+</article>
+<article id="drafts" data-title="drafts" data-keywords="draft autosave auto save unfinished writing">
+<h3>Drafts</h3>
+<p>Save draft (or Ctrl+S) keeps an unfinished email in your Drafts folder, where you can finish it here or on your phone; open it and choose Edit draft. SimplyMail also saves a draft every minute while you write, so nothing's lost if it or the computer closes.</p>
+<p>Closing SimplyMail while you're writing asks whether to save your emails to Drafts first.</p>
+</article>
+<article id="undo-send" data-title="undo send" data-keywords="undo unsend take back wait mistake writing">
+<h3>Undo send</h3>
+<p>After you press Send, the email waits a few seconds before it goes, with Undo and Send now at the bottom of the main window. Undo brings the email back to change it. Choose how long it waits (or turn it off) under Undo send in Settings.</p>
+</article>
+<article id="sending-later" data-title="sending later" data-keywords="schedule scheduled later delay timed writing">
+<h3>Sending later</h3>
+<p>Choose Send later in the email's window, then later today, tomorrow morning, Monday morning, or your own date and time. The email waits on this computer, under Scheduled below the folders, where you can send it now, edit it or cancel it.</p>
+<p>As no server sends it for you, it goes while SimplyMail is open, or when it next starts.</p>
+</article>
+<article id="templates" data-title="templates" data-keywords="template canned reply reuse standard writing">
+<h3>Templates</h3>
+<p>To keep an email to start from again, choose Templates, then Save as template. Later, choose Templates and pick it to fill the email you're writing: its recipients and subject, and its text above yours. Your signature and attachments aren't kept. See your templates, and delete them, under Email templates in Settings.</p>
+</article>
+<article id="asking-for-a-read-receipt" data-title="asking for a read receipt" data-keywords="receipt confirmation opened writing">
+<h3>Asking for a read receipt</h3>
+<p>Tick Ask for a read receipt under the subject. The recipient's mail app may ask them first, or not send one at all.</p>
+</article>
+</section>
+<section>
+<h2>Organising</h2>
+<article id="deleting-emails" data-title="deleting emails" data-keywords="delete trash bin remove empty permanently organising">
+<h3>Deleting emails</h3>
+<p>Delete (or the Delete key) moves emails to your Trash folder, where you can get them back. In Trash itself, or with Shift+Delete, emails are deleted for good, after asking.</p>
+<p>To delete everything in Trash or Junk, open it and choose Empty, or right-click it in the sidebar.</p>
+</article>
+<article id="ticking-several-emails" data-title="ticking several emails" data-keywords="select multiple tick checkbox bulk organising">
+<h3>Ticking several emails</h3>
+<p>Tick the boxes beside emails to work on them together: the top of the list then offers Archive, Move and Delete for all of them. Escape unticks them all.</p>
+</article>
+<article id="moving-and-archiving" data-title="moving and archiving" data-keywords="move archive drag folder file organising">
+<h3>Moving and archiving</h3>
+<p>Archive moves the email to your Archive folder, when you have one. Move picks any folder. You can also drag emails onto a folder in the sidebar; the ticked ones go together.</p>
+</article>
+<article id="junk-and-spam" data-title="junk and spam" data-keywords="spam junk not spam phishing organising">
+<h3>Junk and spam</h3>
+<p>The Junk (or Spam) button moves an email to your junk folder, which also teaches servers that learn from it, like Gmail's. In that folder the button says Not junk, and moves it back to the inbox.</p>
+<p>If your server has two such folders, right-click the one you want and choose Use for junk.</p>
+</article>
+<article id="stars-and-unread" data-title="stars and unread" data-keywords="star flag flagged important unread mark organising">
+<h3>Stars and unread</h3>
+<p>Click the star beside an email (or press S) to star it, as Gmail and other mail apps do too. Mark unread keeps an email bold until you deal with it. Each folder in the sidebar shows how many unread emails it has.</p>
+</article>
+<article id="folders" data-title="folders" data-keywords="folder create new rename delete label organising">
+<h3>Folders</h3>
+<p>Make a folder with the + beside Folders. Right-click one of your own folders to rename or delete it. The server's own folders, like Inbox, Sent and Drafts, stay as they are.</p>
+</article>
+<article id="searching" data-title="searching" data-keywords="search find look for all folders organising">
+<h3>Searching</h3>
+<p>Type in the search box above the list and press Enter (Ctrl+F puts you there). It finds emails by who they're from or to, or their subject.</p>
+<p>Turn on All folders to search every folder at once; each result says which folder it's in. To move or delete one from another folder, open it and choose Go to folder.</p>
+</article>
+<article id="rules-for-new-mail" data-title="rules for new mail" data-keywords="filter rules sort automatic newsletter organising">
+<h3>Rules for new mail</h3>
+<p>Settings, Rules for new mail, sorts new emails as they arrive: if who they're from or to, or their subject, contains some words, move them to a folder, mark them read or star them. Run on Inbox now applies them to the emails already there.</p>
+<p>Rules run while SimplyMail is open on this computer.</p>
+</article>
+<article id="saving-and-importing-folders" data-title="saving and importing folders" data-keywords="export import backup mbox eml thunderbird organising">
+<h3>Saving and importing folders</h3>
+<p>Right-click a folder and choose Save as .mbox to keep every email in it in one file, which Thunderbird and most mail apps can import. Import emails puts .eml or .mbox files back into a folder, with their dates.</p>
+</article>
+<article id="vacation-reply" data-title="vacation reply" data-keywords="out of office away holiday autoreply auto reply organising">
+<h3>Vacation reply</h3>
+<p>Settings, Vacation reply, sets an out-of-office answer, with optional first and last days. Your mail server sends it, even with this computer off, at most once a day to each sender. Gmail keeps its own, in Gmail's settings.</p>
+</article>
+</section>
+<section>
+<h2>Calendar, contacts and tasks</h2>
+<article id="calendar" data-title="calendar" data-keywords="calendar appointment event meeting reminder caldav google calendar, contacts and tasks">
+<h3>Calendar</h3>
+<p>Choose Calendar in the sidebar. To see a calendar kept on a server, choose Connect and give the calendar server's address, or, for Gmail, sign in with Google. New appointment adds one, with a time, place, reminder and repeats; you can email the invitation to the people coming. Reminders pop up while SimplyMail is open.</p>
+</article>
+<article id="contacts" data-title="contacts" data-keywords="contacts address book people carddav calendar, contacts and tasks">
+<h3>Contacts</h3>
+<p>Choose Contacts in the sidebar. Connect an address book on a server, or sign in with Google for Gmail. New contact adds someone, and Write email starts an email to them. From an email, Add to contacts adds its sender.</p>
+</article>
+<article id="tasks" data-title="tasks" data-keywords="tasks todo to do list calendar, contacts and tasks">
+<h3>Tasks</h3>
+<p>Choose Tasks in the sidebar. New task adds one, with a due date. Assign it to someone's email address, and they're emailed the task.</p>
+</article>
+</section>
+<section>
+<h2>Settings and privacy</h2>
+<article id="light-and-dark" data-title="light and dark" data-keywords="theme dark mode light mode colours settings and privacy">
+<h3>Light and dark</h3>
+<p>Settings, Appearance: Match the computer, Light or Dark.</p>
+</article>
+<article id="server-certificates" data-title="server certificates" data-keywords="certificate ssl tls security trust untrusted settings and privacy">
+<h3>Server certificates</h3>
+<p>If a server shows a certificate your computer doesn't trust, SimplyMail asks before carrying on, with the details to check it. Only trust it if you know the server. See and remove certificates you've trusted under Trusted certificates in Settings.</p>
+</article>
+<article id="your-privacy" data-title="your privacy" data-keywords="privacy data security passwords settings and privacy">
+<h3>Your privacy</h3>
+<p>SimplyMail talks to your own mail servers only. Passwords stay in your keyring on Linux, or Windows Credential Manager on Windows; settings, templates, rules and scheduled emails stay in files only you can read. Pictures on the web wait until you ask for them.</p>
+</article>
+<article id="keyboard-shortcuts" data-title="keyboard shortcuts" data-keywords="keys keyboard shortcut hotkey settings and privacy">
+<h3>Keyboard shortcuts</h3>
+<p>These work in the main window while you're not typing in a box (Ctrl ones work anywhere in it):</p>
+<p>Ctrl+N: Write a new email<br>
+Ctrl+R: Reply<br>
+Ctrl+Shift+R: Reply all<br>
+Ctrl+Shift+F: Forward<br>
+Up / Down: Read the previous or next email<br>
+Delete: Move the ticked emails, or the one being read, to Trash<br>
+Shift+Delete: Delete them for good, after asking<br>
+Ctrl+F: Search the folder, or all inboxes<br>
+Ctrl+P: Print the email being read<br>
+S: Star the email being read, or take its star off<br>
+F5: Refresh<br>
+Escape: Untick all<br>
+F1: Open the help</p>
+<p>In an email you're writing: Ctrl+Enter sends, Ctrl+S saves a draft.</p>
+</article>
+</section>
+<section>
+<h2>When something's wrong</h2>
+<article id="the-server-refused-the-password" data-title="the server refused the password" data-keywords="password refused authentication failed login error when something's wrong">
+<h3>The server refused the password</h3>
+<p>Check the password with your provider. For Gmail, use an app password (see Gmail and app passwords). Once it's right, enter it with Settings, Password, Change.</p>
+</article>
+<article id="no-new-mail-notifications" data-title="no new-mail notifications" data-keywords="notifications notify alert new mail sound when something's wrong">
+<h3>No new-mail notifications</h3>
+<p>On Linux: Notifications come through your desktop, while SimplyMail is open. They need the notify-send program, from the libnotify-bin package; install it if they don't appear.</p>
+<p>On Windows: Notifications come from SimplyMail's icon in the taskbar's corner, while SimplyMail is open. Check that Windows' notification settings allow them.</p>
+</article>
+<article id="pop3-accounts" data-title="pop3 accounts" data-keywords="pop3 pop limits missing features when something's wrong">
+<h3>POP3 accounts</h3>
+<p>POP3 accounts have only an inbox: no folders, stars, drafts, rules or vacation reply, and search only looks through the emails already loaded. If your provider offers IMAP, add the account again choosing IMAP for all of these.</p>
+</article>
+</section>
+<footer>Written for SimplyMail 1.0.13. <a href="/">SimplyMail home</a> · <a href="/simplymail-linux/">Download for Linux</a> · <a href="/simplymail-privacy-policy/">Privacy policy</a></footer>
+</main>
+<script>
+(function () {
+  var box = document.getElementById('search');
+  var articles = Array.prototype.slice.call(document.querySelectorAll('article'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section'));
+  var contents = document.getElementById('contents');
+  var none = document.getElementById('none');
+  var order = articles.map(function (a) { return { a: a, parent: a.parentNode }; });
+  function score(a, words) {
+    var title = a.dataset.title, keys = a.dataset.keywords, all = (title + ' ' + a.textContent + ' ' + keys).toLowerCase(), total = 0;
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i];
+      if (all.indexOf(w) < 0) return -1;
+      total += title.indexOf(w) >= 0 ? 3 : keys.indexOf(w) >= 0 ? 2 : 1;
+    }
+    return total;
+  }
+  box.addEventListener('input', function () {
+    var words = box.value.toLowerCase().split(/\s+/).filter(function (w) { return w; });
+    if (!words.length) {
+      // Back where each was: put after its section's heading in the order they came.
+      order.forEach(function (o) { o.a.hidden = false; o.parent.appendChild(o.a); });
+      sections.forEach(function (s) { s.hidden = false; s.querySelector('h2').hidden = false; });
+      contents.hidden = false; none.style.display = 'none';
+      return;
+    }
+    var found = articles.map(function (a) { return { a: a, s: score(a, words) }; })
+      .filter(function (f) { return f.s >= 0; }).sort(function (x, y) { return y.s - x.s; });
+    articles.forEach(function (a) { a.hidden = true; });
+    sections.forEach(function (s, i) { s.hidden = i > 0; s.querySelector('h2').hidden = true; });
+    found.forEach(function (f) { f.a.hidden = false; sections[0].appendChild(f.a); });
+    contents.hidden = true; none.style.display = found.length ? 'none' : 'block';
+  });
+  // A link can carry a search: /help/?q=out+of+office
+  var asked = new URLSearchParams(location.search).get('q');
+  if (asked) { box.value = asked; box.dispatchEvent(new Event('input')); }
+})();
+</script>
+</body>
+</html>
