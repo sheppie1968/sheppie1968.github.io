@@ -83,10 +83,12 @@
 <a href="#finding-an-appointment">Finding an appointment</a>
 <a href="#contacts">Contacts</a>
 <a href="#moving-contacts-in-and-out">Moving contacts in and out</a>
+<a href="#duplicate-contacts">Duplicate contacts</a>
 <a href="#contact-groups">Contact groups</a>
 <a href="#tasks">Tasks</a>
 <h3>Settings and privacy</h3>
 <a href="#light-and-dark">Light and dark</a>
+<a href="#quiet-hours">Quiet hours</a>
 <a href="#server-certificates">Server certificates</a>
 <a href="#your-privacy">Your privacy</a>
 <a href="#keyboard-shortcuts">Keyboard shortcuts</a>
@@ -314,15 +316,20 @@
 <p>Type in Search appointments, above the day's list in the calendar, to find appointments by their title, place or notes: every word you type must be there. Ones still to come are listed first, soonest first, then past ones.</p>
 <p>Click one to see it, with the calendar turned to its day. Clear the search (the X) to see the day's list again.</p>
 </article>
-<article id="contacts" data-title="contacts" data-keywords="contacts address book people carddav birthday birthdays calendar calendar, contacts and tasks">
+<article id="contacts" data-title="contacts" data-keywords="contacts address book people carddav birthday birthdays calendar photo photos picture avatar calendar, contacts and tasks">
 <h3>Contacts</h3>
 <p>Choose Contacts in the sidebar. Connect an address book on a server, or sign in with Google for Gmail. New contact adds someone, and Write email starts an email to them. From an email, Add to contacts adds its sender.</p>
 <p>Contacts' birthdays show in the calendar on their day each year, with their age when the card gives the year (29 February birthdays show on the 28th in other years).</p>
+<p>Contacts' photos show in the list, on their card, and beside their name when you read an email from them. Only photos kept in the contact itself show: a photo that's only a link to the web isn't fetched, so nobody can tell you looked. To add or change one, Edit the contact and choose Add photo or Change photo: the middle square of the picture is kept, made small enough for an address book. Remove photo takes it off.</p>
 </article>
 <article id="moving-contacts-in-and-out" data-title="moving contacts in and out" data-keywords="export import vcf vcard contacts move transfer backup file calendar, contacts and tasks">
 <h3>Moving contacts in and out</h3>
 <p>In Contacts, Export saves all your contacts to a .vcf file, which other mail apps, phones and Google Contacts can import. Import adds the contacts in .vcf files to the address book shown (or the first you can change), each as it was written, birthdays and all.</p>
 <p>Contacts already there are left out, so importing the same file twice adds nobody twice.</p>
+</article>
+<article id="duplicate-contacts" data-title="duplicate contacts" data-keywords="duplicate duplicates merge combine contacts twice same person clean up calendar, contacts and tasks">
+<h3>Duplicate contacts</h3>
+<p>In Contacts, Duplicates lists people who are in your contacts more than once: with the same name, email address or phone number, however it's written. Merge keeps the fullest of them, with its birthday and addresses, adds the others' email addresses, numbers, notes and a photo if it has none, then deletes the others from your address book on the server. Merge all does every group at once.</p>
 </article>
 <article id="contact-groups" data-title="contact groups" data-keywords="group groups list team distribution everyone several people mailing calendar, contacts and tasks">
 <h3>Contact groups</h3>
@@ -341,6 +348,10 @@
 <article id="light-and-dark" data-title="light and dark" data-keywords="theme dark mode light mode colours settings and privacy">
 <h3>Light and dark</h3>
 <p>Settings, Appearance: Match the computer, Light or Dark.</p>
+</article>
+<article id="quiet-hours" data-title="quiet hours" data-keywords="quiet hours do not disturb pause notifications mute silence night settings and privacy">
+<h3>Quiet hours</h3>
+<p>Settings, Quiet hours: no new-mail notifications between the times you choose, such as 22:00 to 07:00. For a break now, Pause notifications at the bottom of the sidebar: for an hour, three hours, or until the morning; Resume ends it early. Mail still arrives and shows as unread, it just doesn't pop up. Reminders for appointments, tasks, snoozed emails and unanswered emails still come.</p>
 </article>
 <article id="server-certificates" data-title="server certificates" data-keywords="certificate ssl tls security trust untrusted settings and privacy">
 <h3>Server certificates</h3>
@@ -393,7 +404,7 @@ F1: Open the help</p>
 <p>POP3 accounts have only an inbox: no folders, stars, drafts, rules or vacation reply, and search only looks through the emails already loaded. If your provider offers IMAP, add the account again choosing IMAP for all of these.</p>
 </article>
 </section>
-<footer>Written for SimplyMail 1.0.17. <a href="/">SimplyMail home</a> · <a href="/simplymail-linux/">Download for Linux</a> · <a href="/simplymail-privacy-policy/">Privacy policy</a></footer>
+<footer>Written for SimplyMail 1.0.18. <a href="/">SimplyMail home</a> · <a href="/simplymail-linux/">Download for Linux</a> · <a href="/simplymail-privacy-policy/">Privacy policy</a></footer>
 </main>
 <script>
 (function () {
