@@ -68,6 +68,7 @@
 <a href="#moving-and-archiving">Moving and archiving</a>
 <a href="#junk-and-spam">Junk and spam</a>
 <a href="#stars-and-unread">Stars and unread</a>
+<a href="#colour-tags">Colour tags</a>
 <a href="#folders">Folders</a>
 <a href="#marking-a-folder-read">Marking a folder read</a>
 <a href="#searching">Searching</a>
@@ -254,6 +255,11 @@
 <h3>Stars and unread</h3>
 <p>Click the star beside an email (or press S) to star it, as Gmail and other mail apps do too. Mark unread keeps an email bold until you deal with it. Each folder in the sidebar shows how many unread emails it has.</p>
 </article>
+<article id="colour-tags" data-title="colour tags" data-keywords="tag tags label labels colour color category categories work personal important thunderbird filter rule automatic organising">
+<h3>Colour tags</h3>
+<p>Tag, beside an open email, puts a coloured tag on it, such as Work or Personal; choose it again to take it off. Tick several emails and choose Tag above the list to tag them all at once. Tags show before the subject in the list, and the tag button above the list shows only the emails with one tag; choose Show all to see the rest again.</p>
+<p>Tags are kept on the emails, on your mail server, so they stay when you read your mail on another computer. The first five are Thunderbird's, so emails tagged in Thunderbird show the same tags here. In Settings, Tags lets you rename them, change their colours, add your own or remove one; a removed tag stays on the emails that have it. To tag new emails as they arrive, make a rule for it in Settings, Rules for new mail. POP3 accounts, and a few mail servers, keep no tags.</p>
+</article>
 <article id="folders" data-title="folders" data-keywords="folder create new rename delete label organising">
 <h3>Folders</h3>
 <p>Make a folder with the + beside Folders. Right-click one of your own folders to rename or delete it. The server's own folders, like Inbox, Sent and Drafts, stay as they are.</p>
@@ -267,10 +273,10 @@
 <p>Type in the search box above the list and press Enter (Ctrl+F puts you there). It finds emails by who they're from or to, or their subject.</p>
 <p>Turn on All folders to search every folder at once; each result says which folder it's in. To move or delete one from another folder, open it and choose Go to folder.</p>
 </article>
-<article id="rules-for-new-mail" data-title="rules for new mail" data-keywords="filter rules sort automatic newsletter organising">
+<article id="rules-for-new-mail" data-title="rules for new mail" data-keywords="filter rules sort automatic newsletter tag label colour color organising">
 <h3>Rules for new mail</h3>
-<p>Settings, Rules for new mail, sorts new emails as they arrive: if who they're from or to, or their subject, contains some words, move them to a folder, mark them read or star them. Run on Inbox now applies them to the emails already there.</p>
-<p>Rules run while SimplyMail is open on this computer.</p>
+<p>Settings, Rules for new mail, sorts new emails as they arrive: if who they're from or to, or their subject, contains some words, move them to a folder, mark them read, star them or give them a colour tag. Run on Inbox now applies them to the emails already there.</p>
+<p>An email can get several tags and marks from different rules, but only the first move. A tagged email that's moved keeps its tag. Rules run while SimplyMail is open on this computer.</p>
 </article>
 <article id="snoozing-an-email" data-title="snoozing an email" data-keywords="snooze later remind hide come back postpone defer waiting organising">
 <h3>Snoozing an email</h3>
@@ -303,13 +309,14 @@
 </section>
 <section>
 <h2>Calendar, contacts and tasks</h2>
-<article id="calendar" data-title="calendar" data-keywords="calendar appointment event meeting reminder caldav google week month view day drag move reschedule double click add new resize longer shorter end print pdf calendar, contacts and tasks">
+<article id="calendar" data-title="calendar" data-keywords="calendar appointment event meeting reminder caldav google week month view day drag move reschedule double click add new resize longer shorter end print pdf repeating recurring series this and later following all events future calendar, contacts and tasks">
 <h3>Calendar</h3>
 <p>Choose Calendar in the sidebar. To see a calendar kept on a server, choose Connect and give the calendar server's address, or, for Gmail, sign in with Google. New appointment adds one, with a time, place, reminder and repeats; you can email the invitation to the people coming. Reminders pop up while SimplyMail is open.</p>
 <p>Month, Week and Day, at the top, switch between a month at a glance and a week or a single day with appointments laid out by time of day; the arrows move a month, a week or a day. In Week and Day, all-day appointments sit along the top, ones at the same time sit side by side, and a red line shows the time now.</p>
 <p>Print, at the top, prints the month, week or day shown: it opens in your browser, whose print dialog also offers Save as PDF.</p>
 <p>To add one at a time, double-click that time in Week or Day: a new appointment opens starting on that half hour.</p>
 <p>To move an appointment, drag it in Week or Day to another time (or, in Week, another day); it lands on the quarter hour and keeps its length. To make it longer or shorter, drag its bottom edge instead. A repeating one asks whether to move just that one or the whole series, and one with people coming asks whether to tell them. Appointments you can't change (someone else's invitation, say) don't move.</p>
+<p>Changing, moving or deleting one of a repeating appointment asks which: This event, This and later, or All events. This and later ends the series just before that one and, for a change, carries on from it as a new series with the change; anyone invited hears about both. A whole series can change its time of day and length, but not its days: moving one to another day moves just that one.</p>
 </article>
 <article id="finding-an-appointment" data-title="finding an appointment" data-keywords="search find appointment calendar event look up past calendar, contacts and tasks">
 <h3>Finding an appointment</h3>
@@ -404,7 +411,7 @@ F1: Open the help</p>
 <p>POP3 accounts have only an inbox: no folders, stars, drafts, rules or vacation reply, and search only looks through the emails already loaded. If your provider offers IMAP, add the account again choosing IMAP for all of these.</p>
 </article>
 </section>
-<footer>Written for SimplyMail 1.0.18. <a href="/">SimplyMail home</a> · <a href="/simplymail-linux/">Download for Linux</a> · <a href="/simplymail-privacy-policy/">Privacy policy</a></footer>
+<footer>Written for SimplyMail 1.0.19. <a href="/">SimplyMail home</a> · <a href="/simplymail-linux/">Download for Linux</a> · <a href="/simplymail-privacy-policy/">Privacy policy</a></footer>
 </main>
 <script>
 (function () {
